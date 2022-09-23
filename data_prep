@@ -1,0 +1,27 @@
+data <- read.csv("2022_Competition_Training.csv")
+data <- data.frame(data)
+summary(data)
+head(data)
+
+library(knitr)
+library(ggplot2)
+library(plyr)
+library(dplyr)
+library(corrplot)
+library(caret)
+library(gridExtra)
+library(scales)
+library(Rmisc)
+library(ggrepel)
+library(randomForest)
+library(psych)
+library(xgboost)
+
+train <- read.csv("2022_Competition_Training.csv")
+test <- read.csv("2022_Competition_Holdout.csv")
+
+dim(train)
+str(train[,c(1:10, 881)])
+
+train$id <- as.integer(train$id)
+str(train[,c(1:10, 881)])
