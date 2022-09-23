@@ -25,3 +25,9 @@ str(train[,c(1:10, 881)])
 
 train$id <- as.integer(train$id)
 str(train[,c(1:10, 881)])
+
+# Exploring response variable hi_flag
+summary(train$hi_flag)
+length(train$hi_flag == 1)
+sum(train$hi_flag == 1)
+sum(train$hi_flag == 0)
